@@ -36,13 +36,7 @@ for t = 1:T
                 end
                 error_rate = error_amount/sum(u);
 
-                if best_error_rate == -1
-                    best_s = s;
-                    best_d = i;
-                    best_threshold = threshold;
-                    best_error_rate = error_rate;
-                    best_predict_info = predict_info;
-                elseif error_rate < best_error_rate
+                if best_error_rate == -1 || error_rate < best_error_rate
                     best_s = s;
                     best_d = i;
                     best_threshold = threshold;
